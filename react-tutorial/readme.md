@@ -87,3 +87,26 @@ npm install formik joi
     self hosted
         - keycloak (don't recommend)
     custom solution (don't recommend)
+
+
+```
+Install the Amplify CLI
+https://docs.amplify.aws/cli/start/install/
+```
+
+```
+Use this to configure amplify within your project
+
+https://docs.amplify.aws/lib/auth/getting-started/q/platform/js/#set-up-backend-resources
+
+you have define global in your vite.config.ts
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  define: {
+    global: {},
+  },
+  plugins: [react()],
+})
+
+```

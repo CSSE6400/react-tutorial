@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^4.6.2",
+    "aws-amplify": "^5.2.1",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "formik": "^2.2.9",
