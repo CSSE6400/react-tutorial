@@ -5,7 +5,7 @@ npm install
 npm run dev
 ```
 
-require .env file
+requires .env file
 
 ```
 VITE_API_URL=api url

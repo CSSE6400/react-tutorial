@@ -1,0 +1,31 @@
+version: '3'
+services:
+  app:
+    build: .
+    container_name: uq-todo
+    depends_on:
+      - db
+    network_mode: 'host'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - '5005:5005'
+
+  db:
+    image: mysql:8
+    restart: always
+    container_name: todo-db
+    environment:
+      MYSQL_ROOT_PASSWORD: test
+      MYSQL_DATABASE: todo-db
+    # volumes:
+    #   - ./database/schema.sql:/docker-entrypoint-initdb.d/1.sql
+    #   - ./database/seed.sql:/docker-entrypoint-initdb.d/2.sql
+    ports:
+      - '5506:3306'
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      interval: 30s
+      timeout: 10s
+      retries: 5
