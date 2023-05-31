@@ -5,7 +5,6 @@ import View from './Todo/View';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  console.log(props?.user);
   return (
     <div>
       <Routes>
